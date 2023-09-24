@@ -25,7 +25,6 @@
 
 以下是如何使用該項目的範例：
 
-『`bash
 # 將CSV檔案中的鄉鎮縣市名稱轉換為數位編碼
 python CSV_to_Number/convert_to_number.py
 
@@ -34,7 +33,7 @@ python CSV_to_Zipcode/convert_to_zipcode.py
  
 # 版本历史
 
-- **1.0.0** (Taiwan UTC +8 China Standard Time，2023-09-24 09:33 AM)：首次發布。
+- **1.0.0** (Taiwan UTC +8 China Standard Time，2023-09-24 09:38 AM)：首次發布。
 
 # 作者
 作者：[Blast77]
