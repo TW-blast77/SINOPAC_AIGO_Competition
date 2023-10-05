@@ -33,7 +33,7 @@ python CSV_to_Zipcode/convert_to_zipcode.py
  
 # 版本历史
 
-- **1.0.0** (Taiwan UTC +8 China Standard Time，2023-09-24 09:38 AM)：首次發布。
+- **1.0.0** (Taiwan UTC +8 China Standard Time，2023-10-05 06:59 AM)：首次發布。
 
 # 作者
 作者：[Blast77]
