@@ -1,5 +1,4 @@
-# SINOPAC_AIGO_Competition[https://github.com/TW-blast77/SINOPAC_AIGO_Competition]
-
+# SINOPAC_AIGO_Competition
 此項目旨在存放和處理CSV資料集，包含以下目錄和功能：
 
 - **CSV_DataSet**：存放測試資料集的目錄。
@@ -34,7 +33,11 @@ python CSV_to_Number/convert_to_number.py
 # 將CSV檔案中的鄉鎮縣市名稱轉換為郵遞區號
 python CSV_to_Zipcode/convert_to_zipcode.py
 ```
-
+# HTML不動產資料
+```bash
+# 開啟HTML資料夾中的 Property_HTML
+Property_HTML.html
+```
 # 版本历史
 
 - **1.0.0** (Taiwan UTC +8 China Standard Time，2023-10-05 06:59 AM)：首次發布。
