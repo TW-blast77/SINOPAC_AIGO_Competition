@@ -1,11 +1,12 @@
 # SINOPAC_AIGO_Competition
-此項目用於存放和處理CSV資料集，並包括以下目錄和功能：
+
+此項目旨在存放和處理CSV資料集，包含以下目錄和功能：
 
 - **CSV_DataSet**：存放測試資料集的目錄。
 
-- **CSV_to_Number**：包含將CSV檔案中的鄉鎮縣市名稱轉換為數字編碼的代碼。
+- **CSV_to_Number**：包含將CSV檔案中的鄉鎮縣市名稱轉換為數字編碼的程式碼。
 
-- **CSV_to_Zipcode**：包含將CSV檔案中的鄉鎮縣市名稱轉換為郵遞區號的代碼。
+- **CSV_to_Zipcode**：包含將CSV檔案中的鄉鎮縣市名稱轉換為郵遞區號的程式碼。
 
 - **Save_CSV**：用於存放輸出的.CSV檔案的目錄。
 
@@ -25,11 +26,14 @@
 
 以下是如何使用該項目的範例：
 
+```bash
 # 將CSV檔案中的鄉鎮縣市名稱轉換為數位編碼
 python CSV_to_Number/convert_to_number.py
-
+```
+```bash
 # 將CSV檔案中的鄉鎮縣市名稱轉換為郵遞區號
-```python CSV_to_Zipcode/convert_to_zipcode.py```
+python CSV_to_Zipcode/convert_to_zipcode.py
+```
 
 # 版本历史
 
