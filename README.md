@@ -1,4 +1,4 @@
-# SINOPAC_AIGO_Competition
+# SINOPAC_AIGO_Competition[https://github.com/TW-blast77/SINOPAC_AIGO_Competition]
 
 此項目旨在存放和處理CSV資料集，包含以下目錄和功能：
 
