@@ -15,8 +15,6 @@ def transform_columns_to_numbers(input_csv_path, output_csv_path, columns_to_enc
 
             df.at[i, column_name] = column_code[column_name][column_value]
     df.to_csv(output_csv_path, index=False)
-
-
 # 主程式
 if __name__ == '__main__':
     import datetime

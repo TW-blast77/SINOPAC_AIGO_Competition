@@ -8,7 +8,6 @@ import datetime #導入datetime ，用於時間運算
 
 DataSet = './CSV_DataSet/AOI.csv' #輸入CSV位置
 SaveName = './Save_CSV/Output_CSV/Output_AOI-CSV_Version1.csv'  #輸出CSV位置
-
 #紀錄開始時間
 start_time = datetime.datetime.now()
 
