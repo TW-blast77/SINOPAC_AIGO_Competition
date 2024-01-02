@@ -38,9 +38,10 @@ python CSV_to_Zipcode/convert_to_zipcode.py
 # 開啟HTML資料夾中的 Property_HTML
 Property_HTML.html
 ```
-# 版本历史
+# 版本歷史
 
 - **1.0.0** (Taiwan UTC +8 China Standard Time，2023-10-05 06:59 AM)：首次發布。
-
+- **1.1.0** (Taiwan UTC +8 China Standard Time，2023-10-05 06:48 AM)：二次發布。
+- **1.1.0** (Taiwan UTC +8 China Standard Time，2024-01-02 10:20 AM)：二次發布。
 # 作者
 作者：[Blast77]
