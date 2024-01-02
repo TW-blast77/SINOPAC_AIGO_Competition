@@ -7,7 +7,7 @@ import csv
 
 dictionary = {}
 my_list = []
-df = pd.read_csv('./CSV/public_dataset.csv',encoding='utf-8')
+df = pd.read_csv('./CSV_DataSet/public_dataset.csv',encoding='utf-8')
 df.insert(1, 'zipcode', None, allow_duplicates=False)
 
 for i in range(0, len(df)):

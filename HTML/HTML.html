@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>不動產資料</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css">
+  <style>
+    .btn-success {
+      color: #fff;
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+    .btn-danger {
+      color: #fff;
+      background-color: #dc3545;
+      border-color: #dc3545;
+    }
+    .status-pass {
+      color: green;
+    }
+    .status-fail {
+      color: red;
+    }
+
+    @keyframes rowRemoveAnimation {
+      0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+    }
+
+    .dataTables_removed {
+      animation: rowRemoveAnimation 0.5s forwards;
+    }
+
+    #statusMenu {
+      display: none;
+      position: fixed;
+      top: 50px;
+      right: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    #closeMenuBtn {
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .pagination-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .pagination-btn {
+      cursor: pointer;
+      margin: 0 5px;
+    }
+
+    .active-page {
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-4">
+  <table id="realEstateData" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>縣市</th>
+        <th>鄉鎮市區</th>
+        <th>路名</th>
+        <th>土地面積</th>
+        <th>使用分區</th>
+        <th>移轉層次</th>
+        <th>總樓層數</th>
+        <th>主要用途</th>
+        <th>主要建材</th>
+        <th>建物型態</th>
+        <th>屋齡</th>
+        <th>建物面積</th>
+        <th>車位面積</th>
+        <th>車位個數</th>
+        <th>橫坐標</th>
+        <th>縱坐標</th>
+        <th>備註</th>
+        <th>主建物面積</th>
+        <th>陽台面積</th>
+        <th>附屬建物面積</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+
+<div id="statusMenu">
+  <div id="closeMenuBtn">關閉選單</div>
+  <ul id="statusList"></ul>
+  <div class="pagination-container" id="paginationContainer"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/animate.css"></script>
+
+<script>
+  $(document).ready(function() {
+    function getRandomInt(n, m) {
+      return Math.floor(Math.random() * (m - n + 1) + n);
+    }
+
+    function getRandomFloat(min, max) {
+      return (Math.random() * (max - min) + min).toFixed(2);
+    }
+
+    function generateRandomData(count) {
+      var randomData = [];
+      for (var i = 1; i <= count; i++) {
+        randomData.push({
+          "ID": i,
+          "縣市": getRandomInt(10000, 25000),
+          "鄉鎮市區": getRandomInt(1, 10),
+          "路名": getRandomInt(1, 10),
+          "土地面積": getRandomFloat(1, 5),
+          "使用分區": getRandomInt(1, 10),
+          "移轉層次": getRandomInt(1, 10),
+          "總樓層數": getRandomInt(1, 10),
+          "主要用途": getRandomInt(1, 10),
+          "主要建材": getRandomInt(1, 10),
+          "建物型態": "建物型態",
+          "屋齡": getRandomFloat(1, 20),
+          "建物面積": getRandomFloat(1, 100),
+          "車位面積": getRandomFloat(1, 30),
+          "車位個數": getRandomInt(1, 5),
+          "橫坐標": getRandomFloat(1, 1000),
+          "縱坐標": getRandomFloat(1, 1000),
+          "備註": "備註",
+          "主建物面積": getRandomFloat(1, 500),
+          "陽台面積": getRandomFloat(1, 50),
+          "附屬建物面積": getRandomFloat(1, 100)
+        });
+      }
+      return randomData;
+    }
+
+    var initialData = generateRandomData(50);
+
+    var currentPage = 1;
+    var pageSize = 10;
+
+    var table = $('#realEstateData').DataTable({
+      data: initialData,
+      columns: [
+        { data: 'ID' },
+        { data: '縣市' },
+        { data: '鄉鎮市區' },
+        { data: '路名' },
+        { data: '土地面積' },
+        { data: '使用分區' },
+        { data: '移轉層次' },
+        { data: '總樓層數' },
+        { data: '主要用途' },
+        { data: '主要建材' },
+        { data: '建物型態' },
+        { data: '屋齡' },
+        { data: '建物面積' },
+        { data: '車位面積' },
+        { data: '車位個數' },
+        { data: '橫坐標' },
+        { data: '縱坐標' },
+        { data: '備註' },
+        { data: '主建物面積' },
+        { data: '陽台面積' },
+        { data: '附屬建物面積' },
+        { 
+          data: null,
+          render: function (data, type, row) {
+            var passBtn = '<button class="btn btn-success btn-sm btn-pass" data-handled="false">通過</button>';
+            var failBtn = '<button class="btn btn-danger btn-sm btn-fail" data-handled="false">不通過</button>';
+            return passBtn + ' ' + failBtn;
+          }
+        }
+      ],
+      paging: true,
+      pageLength: pageSize,
+      language: {
+        url: "https://cdn.datatables.net/plug-ins/1.11.5/i18n/Chinese-traditional.json"
+      }
+    });
+
+    var clickedRows = [];
+
+    $('#realEstateData tbody').on('click', '.btn-pass, .btn-fail', function () {
+      var currentRow = $(this).closest('tr');
+      var data = table.row(currentRow).data();
+
+      clickedRows.push(data);
+
+      var status = $(this).hasClass('btn-pass') ? '已通過' : '未通過';
+      var remark = $(this).hasClass('btn-pass') ? '無' : '需進一步檢查';
+
+      table.cell(currentRow, 9).data(status).draw();
+      table.cell(currentRow, 10).data(remark).draw();
+
+      currentRow.addClass('dataTables_removed').fadeOut(500, function () {
+        table.row(currentRow).remove().draw(false);
+      });
+
+      currentRow.find('.btn-pass, .btn-fail').prop('disabled', true);
+
+      if ($('#statusMenu').is(':visible')) {
+        updateStatusMenu();
+        updatePagination();
+      }
+    });
+
+    function reportIssue(coilNumber, status, remark) {
+      alert('已通報問題：\nID：' + coilNumber + '\n狀態：' + status + '\n備註：' + remark);
+    }
+
+    $('#showClickedRows').on('click', function() {
+      $('#realEstateData tbody tr').removeClass('dataTables_removed');
+      updateStatusMenu();
+      updatePagination();
+      $('#statusMenu').toggle();
+    });
+
+    $('#closeMenuBtn').on('click', function() {
+      $('#statusMenu').hide();
+    });
+
+    function updateStatusMenu() {
+      var statusList = $('#statusList');
+      statusList.empty();
+
+      var startIndex = (currentPage - 1) * pageSize;
+      var endIndex = startIndex + pageSize - 1;
+
+      $.each(clickedRows.slice(startIndex, endIndex + 1), function(index, rowData) {
+        var listItem = $('<li>').text('ID: ' + rowData['ID'] + ', 狀態: ' + rowData['主要用途']);
+        statusList.append(listItem);
+      });
+    }
+
+    function updatePagination() {
+      var totalPages = Math.ceil(clickedRows.length / pageSize);
+
+      var paginationContainer = $('#paginationContainer');
+      paginationContainer.empty();
+
+      if (totalPages > 1) {
+        var prevBtn = $('<div class="pagination-btn">&lt; 上一頁</div>');
+        var nextBtn = $('<div class="pagination-btn">下一頁 &gt;</div>');
+
+        prevBtn.on('click', function() {
+          if (currentPage > 1) {
+            currentPage--;
+            updateStatusMenu();
+            updatePagination();
+          }
+        });
+
+        nextBtn.on('click', function() {
+          if (currentPage < totalPages) {
+            currentPage++;
+            updateStatusMenu();
+            updatePagination();
+          }
+        });
+
+        paginationContainer.append(prevBtn);
+
+        for (var i = 1; i <= totalPages; i++) {
+          var pageBtn = $('<div class="pagination-btn">' + i + '</div>');
+          pageBtn.on('click', function() {
+            currentPage = parseInt($(this).text());
+            updateStatusMenu();
+            updatePagination();
+          });
+
+          if (i === currentPage) {
+            pageBtn.addClass('active-page');
+          }
+
+          paginationContainer.append(pageBtn);
+        }
+
+        paginationContainer.append(nextBtn);
+      }
+    }
+  });
+</script>
+
+<button id="showClickedRows" class="btn btn-primary">顯示被點擊的行</button>
+
+</body>
+</html>
