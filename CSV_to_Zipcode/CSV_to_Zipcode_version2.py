@@ -50,3 +50,4 @@ with open(csv_filename, mode='w',encoding='utf-8' ,newline='') as file:
     for item in my_list:
         writer.writerow([item])
 df.to_csv("public_dataset_to.csv", index=False)  # index=False 表示不保存索引列
+
