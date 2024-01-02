@@ -9,7 +9,6 @@ dictionary = {}
 my_list = []
 df = pd.read_csv('./CSV_DataSet/public_dataset.csv',encoding='utf-8')
 df.insert(1, 'zipcode', None, allow_duplicates=False)
-
 for i in range(0, len(df)):
     query = df['縣市'][i] + df['鄉鎮市區'][i] + df['路名'][i]
     if query in dictionary.keys():

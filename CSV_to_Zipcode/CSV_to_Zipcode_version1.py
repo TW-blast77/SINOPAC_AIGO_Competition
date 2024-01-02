@@ -50,7 +50,6 @@ for i in range(0, len(df)):
         if r.json()['zipcode'] != "":
             zipcode = r.json()['zipcode']
             dictionary[query] = r.json()['zipcode']
-
             # 將資料插入資料庫
             cursor.execute('''
                 INSERT INTO zipcodes (city, district, road, zipcode)

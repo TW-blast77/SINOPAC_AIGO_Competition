@@ -18,7 +18,6 @@ for i in range(0, len(df)):
     if dataset > 2.0195:
         
         print(df.loc[i, ['captureTime', 'KW_A', 'KW_B', 'KW_C', 'KWH']])
-
 # 紀錄結束時間
 end_time = datetime.datetime.now()
 print("Save Successful!", '\n')
