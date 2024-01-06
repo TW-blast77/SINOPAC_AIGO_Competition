@@ -22,7 +22,7 @@ git clone https://github.com/TW-blast77/SINOPAC_AIGO_Competition.git
 - **Test**：包含專案的測試程序和歷史資料。
 # !! 環境設置 !! (請先執行環境測試檔案)
 請在cmd包中執行，安裝python基本環境以及python模組。
-```bash
+```python
 python install_script.py
 ```
 # 用法
@@ -31,24 +31,21 @@ python install_script.py
 ### **3. 使用 *CSV_to_Zipcode* 目錄中的程式碼將CSV檔案中的鄉鎮縣市名稱轉換為郵遞區號。**
 ### **4. 輸出的CSV檔案將會保存在 *Save_CSV* 目錄中。**
 
-
-
-
 # 程式範例
 以下是如何使用該項目的範例：
 
 ## Step 1 將CSV檔案中的鄉鎮縣市名稱轉換為郵遞區號
-```bash
+```python
 python CSV_to_Zipcode/convert_to_zipcode.py
 ```
 ## Step 2將CSV檔案中的鄉鎮縣市名稱轉換為數位編碼
-```bash
+```python
 python CSV_to_Number/convert_to_number.py
 ```
 # HTML不動產資料
 
 ## Step 3開啟HTML資料夾中的 Property_HTML
-```bash
+```html
 Property_HTML.html
 ```
 # 版本歷史
