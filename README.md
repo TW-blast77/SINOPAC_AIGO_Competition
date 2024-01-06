@@ -1,4 +1,4 @@
-# SINOPAC_AIGO_Competition
+# **SINOPAC_AIGO_Competition**
 此項目旨在存放和處理CSV資料集，包含以下目錄和功能：
 
 - **CSV_DataSet**：存放測試資料集的目錄。
@@ -39,7 +39,7 @@ Property_HTML.html
 - **1.0.0** (Taiwan UTC +8 China Standard Time，2023-10-05 06:59 AM)：首次發布。
 - **1.1.0** (Taiwan UTC +8 China Standard Time，2023-10-05 06:48 AM)：二次發布。
 - **1.2.0** (Taiwan UTC +8 China Standard Time，2024-01-02 10:23 AM)：三次發布。
-- **1.2.0** (Taiwan UTC +8 China Standard Time，2024-01-03 02:01 PM)：四次發布。
+- **1.3.0** (Taiwan UTC +8 China Standard Time，2024-01-03 02:01 PM)：四次發布。
 - **1.4.0** (Taiwan UTC +8 China Standard Time，2024-01-05 05:05 PM)：五次發布。
 - **1.4.1** (Taiwan UTC +8 China Standard Time，2024-01-06 06:00 PM)：六次發布。
 # 作者
