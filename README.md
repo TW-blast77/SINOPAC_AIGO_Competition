@@ -24,17 +24,18 @@
 ## 範例
 以下是如何使用該項目的範例：
 
+
 ```bash
-# 將CSV檔案中的鄉鎮縣市名稱轉換為數位編碼
-python CSV_to_Number/convert_to_number.py
+#Step 1 將CSV檔案中的鄉鎮縣市名稱轉換為郵遞區號
+python CSV_to_Zipcode/convert_to_zipcode.py
 ```
 ```bash
-# 將CSV檔案中的鄉鎮縣市名稱轉換為郵遞區號
-python CSV_to_Zipcode/convert_to_zipcode.py
+#Step 2將CSV檔案中的鄉鎮縣市名稱轉換為數位編碼
+python CSV_to_Number/convert_to_number.py
 ```
 # HTML不動產資料
 ```bash
-# 開啟HTML資料夾中的 Property_HTML
+#Step 3開啟HTML資料夾中的 Property_HTML
 Property_HTML.html
 ```
 # 版本歷史
@@ -44,5 +45,6 @@ Property_HTML.html
 - **1.2.0** (Taiwan UTC +8 China Standard Time，2024-01-02 10:23 AM)：三次發布。
 - **1.2.0** (Taiwan UTC +8 China Standard Time，2024-01-03 02:01 PM)：四次發布。
 - **1.4.0** (Taiwan UTC +8 China Standard Time，2024-01-05 05:05 PM)：五次發布。
+- **1.4.1** (Taiwan UTC +8 China Standard Time，2024-01-06 06:00 PM)：六次發布。
 # 作者
 作者：[Blast77]
