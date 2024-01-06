@@ -1,5 +1,5 @@
 # 環境安裝建置 
-請在 __**git bash**__ 中執行，下載此專案。
+請在 __git bash__ 中執行，下載此專案。
 ## Step 1 :切換至指定專案目錄
 ```bash
 cd **在此填入您的目錄位置**
@@ -9,7 +9,7 @@ cd **在此填入您的目錄位置**
 git clone https://github.com/TW-blast77/SINOPAC_AIGO_Competition.git
 ```
 # !! Python環境 !! **(請先一定要執行)**
-請在 __**cmd**__ 包中執行，安裝python基本環境以及python模組。
+請在 __cmd__ 包中執行，安裝python基本環境以及python模組。
 ```python
 python install_script.py
 ```
