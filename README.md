@@ -8,7 +8,7 @@ cd **在此填入您的目錄位置**
 ```git
 git clone https://github.com/TW-blast77/SINOPAC_AIGO_Competition.git
 ```
-# ==!! 環境設置 !! (請先執行環境測試檔案)==
+# == 環境設置(請先執行環境測試檔案) ==
 請在cmd包中執行，安裝python基本環境以及python模組。
 == !! 環境設置 !! (請先執行環境測試檔案) ==
 ```python
