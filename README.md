@@ -24,18 +24,18 @@
 ## 範例
 以下是如何使用該項目的範例：
 
-
+## Step 1 將CSV檔案中的鄉鎮縣市名稱轉換為郵遞區號
 ```bash
-#Step 1 將CSV檔案中的鄉鎮縣市名稱轉換為郵遞區號
 python CSV_to_Zipcode/convert_to_zipcode.py
 ```
+## Step 2將CSV檔案中的鄉鎮縣市名稱轉換為數位編碼
 ```bash
-#Step 2將CSV檔案中的鄉鎮縣市名稱轉換為數位編碼
 python CSV_to_Number/convert_to_number.py
 ```
 # HTML不動產資料
+
+## Step 3開啟HTML資料夾中的 Property_HTML
 ```bash
-#Step 3開啟HTML資料夾中的 Property_HTML
 Property_HTML.html
 ```
 # 版本歷史
