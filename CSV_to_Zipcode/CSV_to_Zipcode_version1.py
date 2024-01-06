@@ -10,6 +10,7 @@ import csv
 # Step 2: 定義資料庫檔案名稱
 db_filename = "example.db"
 csv_filename = "./Save_CSV/Output_CSV/Output_CSV_Version1.csv"
+
 # Step 3: 創建資料表的函式
 def create_zipcodes_table():
     # 連接到 SQLite 資料庫
@@ -68,6 +69,7 @@ def process_address_data(df):
                 zipcode = r.json()['zipcode']
                 dictionary[query] = r.json()['zipcode']
 
+                # 插入数据
                 cursor.execute('''
                     INSERT INTO zipcodes (city, district, road, zipcode)
                     VALUES (?, ?, ?, ?)
@@ -83,7 +85,7 @@ def process_address_data(df):
     找尋到郵遞區號為: {(r.json()['zipcode'])}
     ------------------------------------------
     """)
-                df.loc[i, 'zipcode'] = zipcode # !!! 將搜尋的zipcode取代原本的房屋地址 !!!
+                df.loc[i, 'zipcode'] = zipcode  # !!! 將搜尋的zipcode取代原本的房屋地址 !!!
                 time.sleep(2)
             else:
                 # 如果查詢失敗，將錯誤資料加入列表

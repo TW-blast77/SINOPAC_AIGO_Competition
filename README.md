@@ -4,6 +4,7 @@
 ```bash
 cd **在此填入您的目錄位置**
 ```
+## Step 2 :下載 *SINOPAC_AIGO_Competition* 專案
 ```git
 git clone https://github.com/TW-blast77/SINOPAC_AIGO_Competition.git
 ```
@@ -55,5 +56,6 @@ Property_HTML.html
 - **1.3.0** (Taiwan UTC +8 China Standard Time，2024-01-03 02:01 PM)：四次發布。
 - **1.4.0** (Taiwan UTC +8 China Standard Time，2024-01-05 05:05 PM)：五次發布。
 - **1.4.1** (Taiwan UTC +8 China Standard Time，2024-01-06 06:00 PM)：六次發布。
+
 # 作者
 作者：[Blast77]
