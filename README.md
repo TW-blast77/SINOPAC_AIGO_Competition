@@ -43,5 +43,6 @@ Property_HTML.html
 - **1.1.0** (Taiwan UTC +8 China Standard Time，2023-10-05 06:48 AM)：二次發布。
 - **1.2.0** (Taiwan UTC +8 China Standard Time，2024-01-02 10:23 AM)：三次發布。
 - **1.2.0** (Taiwan UTC +8 China Standard Time，2024-01-03 02:01 PM)：四次發布。
+- **1.4.0** (Taiwan UTC +8 China Standard Time，2024-01-05 05:05 PM)：五次發布。
 # 作者
 作者：[Blast77]

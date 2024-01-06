@@ -6,6 +6,8 @@ import urllib.parse
 import time
 import csv
 
+db_filename = "example.db"
+
 def create_zipcodes_table():
     # 連接到 SQLite 資料庫
     conn = sqlite3.connect(db_filename)
