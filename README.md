@@ -8,6 +8,12 @@ cd **在此填入您的目錄位置**
 ```git
 git clone https://github.com/TW-blast77/SINOPAC_AIGO_Competition.git
 ```
+# !! 環境設置 !! (請先執行環境測試檔案)
+請在cmd包中執行，安裝python基本環境以及python模組。
+```python
+python install_script.py
+```
+
 # **SINOPAC_AIGO_Competition**
 此項目旨在存放和處理CSV資料集，包含以下目錄和功能：
 
@@ -20,11 +26,7 @@ git clone https://github.com/TW-blast77/SINOPAC_AIGO_Competition.git
 - **Save_CSV**：用於存放輸出的.CSV檔案的目錄。
 
 - **Test**：包含專案的測試程序和歷史資料。
-# !! 環境設置 !! (請先執行環境測試檔案)
-請在cmd包中執行，安裝python基本環境以及python模組。
-```python
-python install_script.py
-```
+
 # 用法
 ### **1. 在 _*CSV_DataSet*_ 目錄中存放測試資料集。**
 ### **2. 使用 *CSV_to_Number* 目錄中的程式碼將CSV檔案中的鄉鎮縣市名稱轉換為數位編碼。**
