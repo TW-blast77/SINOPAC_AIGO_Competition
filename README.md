@@ -1,3 +1,12 @@
+# 下載此Project 
+請在**git bash** 中執行，下載此專案。
+## Step 1 :切換至指定專案目錄
+```bash
+cd **在此填入您的目錄位置**
+```
+```bash
+git clone https://github.com/TW-blast77/SINOPAC_AIGO_Competition.git
+```
 # **SINOPAC_AIGO_Competition**
 此項目旨在存放和處理CSV資料集，包含以下目錄和功能：
 
@@ -10,14 +19,18 @@
 - **Save_CSV**：用於存放輸出的.CSV檔案的目錄。
 
 - **Test**：包含專案的測試程序和歷史資料。
-
+# !! 環境設置 !! (請先執行環境測試檔案)
+請在cmd包中執行，安裝python基本環境以及python模組。
+```bash
+python install_script.py
+```
 # 用法
 ### **1. 在 _*CSV_DataSet*_ 目錄中存放測試資料集。**
 ### **2. 使用 *CSV_to_Number* 目錄中的程式碼將CSV檔案中的鄉鎮縣市名稱轉換為數位編碼。**
 ### **3. 使用 *CSV_to_Zipcode* 目錄中的程式碼將CSV檔案中的鄉鎮縣市名稱轉換為郵遞區號。**
 ### **4. 輸出的CSV檔案將會保存在 *Save_CSV* 目錄中。**
 
-# 範例
+# 程式範例
 以下是如何使用該項目的範例：
 
 ## Step 1 將CSV檔案中的鄉鎮縣市名稱轉換為郵遞區號
