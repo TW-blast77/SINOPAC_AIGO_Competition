@@ -4,7 +4,7 @@
 ```bash
 cd **在此填入您的目錄位置**
 ```
-```bash
+```git
 git clone https://github.com/TW-blast77/SINOPAC_AIGO_Competition.git
 ```
 # **SINOPAC_AIGO_Competition**
