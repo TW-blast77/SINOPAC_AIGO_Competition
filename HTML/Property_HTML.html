@@ -82,9 +82,7 @@
     <thead>
       <tr>
         <th>ID</th>
-        <th>縣市</th>
-        <th>鄉鎮市區</th>
-        <th>路名</th>
+        <th>Zipcode</th> <!-- 新增 Zipcode 欄位 -->
         <th>土地面積</th>
         <th>使用分區</th>
         <th>移轉層次</th>
@@ -135,11 +133,10 @@
     function generateRandomData(count) {
       var randomData = [];
       for (var i = 1; i <= count; i++) {
+        var zipcode = getRandomInt(10000, 25000);
         randomData.push({
           "ID": i,
-          "縣市": getRandomInt(10000, 25000),
-          "鄉鎮市區": getRandomInt(1, 10),
-          "路名": getRandomInt(1, 10),
+          "Zipcode": zipcode,  // 將縣市、鄉鎮市區、路名合併成 "Zipcode"
           "土地面積": getRandomFloat(1, 5),
           "使用分區": getRandomInt(1, 10),
           "移轉層次": getRandomInt(1, 10),
@@ -171,9 +168,7 @@
       data: initialData,
       columns: [
         { data: 'ID' },
-        { data: '縣市' },
-        { data: '鄉鎮市區' },
-        { data: '路名' },
+        { data: 'Zipcode' },  // 修改成新的 Zipcode 欄位
         { data: '土地面積' },
         { data: '使用分區' },
         { data: '移轉層次' },

@@ -124,7 +124,7 @@ def main():
     write_to_csv(csv_filename, error_list)
 
     # 將 DataFrame 寫入新的 CSV 檔案
-    df.to_csv("./Save_CSV/Output_CSV/Output_CSV_Version1.csv", index=False)
+    df.to_csv("./Save_CSV/Output_CSV/Output_CSV_Version2.csv", index=False)
 
 # Step 7: 程式進入點
 if __name__ == "__main__":
